@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fluxo Virtual | Assistência Estratégica</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="theme-switch-wrapper">
+        <button id="theme-toggle" aria-label="Alternar modo claro e escuro">🌓 Modo Escuro</button>
+    </div>
+
+    <header class="container-fluid py-3 shadow-sm sticky-top bg-white">
+        <div class="container d-flex justify-content-between align-items-center">
+            <h1 class="logo">Fluxo<span>Virtual</span></h1>
+            <nav>
+                <ul class="nav align-items-center">
+                    <li class="nav-item d-none d-md-block"><a class="nav-link" href="#servicos">Serviços</a></li>
+                    <li class="nav-item d-none d-md-block"><a class="nav-link" href="#contato">Contato</a></li>
+                    <li class="nav-item d-none d-md-block"><a class="nav-link" href="#sobre mim">Sobre Mim</a></li>
+                    <li class="nav-item ms-3">
+                        <a class="nav-link social-icon" href="https://www.linkedin.com/in/santyago/" target="_blank" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link social-icon" href="https://instagram.com/yagosantiago_39" target="_blank" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero-section text-center d-flex align-items-center">
+            <div class="container">
+                <h2 class="display-4 fw-bold">Organização que gera liberdade.</h2>
+                <p class="lead">Soluções em suporte administrativo para o seu negócio crescer.</p>
+            </div>
+        </section>
+
+        <section id="servicos" class="container py-5">
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=600&q=80" alt="Equipe planejando em escritório moderno" class="img-fluid rounded-3 shadow">
+                </div>
+                <div class="col-md-6 d-flex flex-column justify-content-center">
+                    <h3>Excelência em Suporte ADM</h3>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">✔️ Gestão de Fluxo de Caixa</li>
+                        <li class="list-group-item">✔️ Atendimento Bilíngue</li>
+                        <li class="list-group-item">✔️ Organização de Processos Digitais</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="contato" class="bg-light py-5">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-6 card p-4 shadow border-0">
+                        <h2 class="text-center mb-4">Solicite um Orçamento</h2>
+                        <form id="contactForm">
+                            <div class="mb-3">
+                                <label for="nome" class="form-label">Nome Completo</label>
+                                <input type="text" class="form-control" id="nome" required minlength="3" placeholder="Ex: João Silva">
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">E-mail Profissional</label>
+                                <input type="email" class="form-control" id="email" required placeholder="nome@empresa.com">
+                            </div>
+                            <div class="mb-3">
+                                <label for="telefone" class="form-label">Telefone (WhatsApp)</label>
+                                <input type="tel" class="form-control" id="telefone" required pattern="[0-9]{10,11}" placeholder="Apenas números">
+                            </div>
+                            <div class="mb-3">
+                                <label for="mensagem" class="form-label">Como posso ajudar?</label>
+                                <textarea class="form-control" id="mensagem" rows="3" maxlength="300" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100">Enviar Mensagem</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="py-4 text-center">
+        <p>&copy; 2026 Fluxo Virtual. Design Acessível.</p>
+    </footer>
+
+    <script>
+        const btn = document.getElementById('theme-toggle');
+        btn.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+            btn.innerText = document.body.classList.contains('dark-mode') ? "☀️ Modo Claro" : "🌓 Modo Escuro";
+        });
+    </script>
+</body>
+</html>

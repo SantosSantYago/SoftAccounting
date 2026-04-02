@@ -1,0 +1,78 @@
+/* Atributo 1: Variáveis para facilitar o Modo Escuro */
+:root {
+    --primary-color: #006666;
+    --bg-color: #ffffff;
+    --text-color: #333333;
+    --card-bg: #ffffff;
+}
+
+/* Atributo 2: Configurações de Transição */
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background 0.4s, color 0.4s;
+    overflow-x: hidden;
+}
+
+/* Atributo 3: Estilização da Logo (Seletores combinados) */
+.logo {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--primary-color);
+}
+.logo span { color: #00cccc; }
+
+/* Atributo 4: Background com Imagem Profissional e Overlay */
+.hero-section {
+    height: 60vh;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                url('https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&w=1350&q=80');
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+/* Atributo 5: Customização de botões e estados (Pseudo-classes) */
+.btn-primary {
+    background-color: var(--primary-color);
+    border: none;
+    padding: 12px;
+    font-weight: bold;
+}
+.btn-primary:hover {
+    background-color: #004d4d;
+    transform: scale(1.02);
+}
+
+/* Atributo 6: Estilos para o MODO ESCURO */
+body.dark-mode {
+    --bg-color: #121212;
+    --text-color: #f0f0f0;
+    --card-bg: #1e1e1e;
+}
+.dark-mode .card, .dark-mode header, .dark-mode .bg-light {
+    background-color: var(--card-bg) !important;
+    color: white;
+}
+.dark-mode input, .dark-mode textarea {
+    background-color: #2d2d2d;
+    color: white;
+    border-color: #444;
+}
+
+/* Botão de Toggle de Acessibilidade */
+.theme-switch-wrapper {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
+}
+#theme-toggle {
+    border: none;
+    padding: 10px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    background: var(--primary-color);
+    color: white;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
