@@ -10,9 +10,6 @@
 </head>
 <body>
 
-    <div class="theme-switch-wrapper">
-        <button id="theme-toggle" aria-label="Alternar modo claro e escuro">🌓 Modo Escuro</button>
-    </div>
 
     <header class="container-fluid py-3 shadow-sm sticky-top bg-white">
         <div class="container d-flex justify-content-between align-items-center">
@@ -118,12 +115,6 @@
         <p>&copy; 2026 Soft Accountig. Contabilidade Responsável.</p>
     </footer>
 
-    <script>
-        const btn = document.getElementById('theme-toggle');
-        btn.addEventListener('click', () => {
-            document.body.classList.toggle('dark-mode');
-            btn.innerText = document.body.classList.contains('dark-mode') ? "☀️ Modo Claro" : "🌓 Modo Escuro";
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
