@@ -10,3 +10,5 @@ Deverá conter TODOS os itens abaixo para obter nota 10. Cada item abaixo vale 1
 - Uso de Imagens de forma a produzir design profissional (Ao menos 2 imagens) 
 - Validação de entrada dos dados dos formulários (5 validações) 
 - Design/Layout/Cores Itens de acessibilidade (Imagens, Modo claro/escuro)
+
+FINALIZADO
