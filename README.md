@@ -11,4 +11,5 @@ Deverá conter TODOS os itens abaixo para obter nota 10. Cada item abaixo vale 1
 - Validação de entrada dos dados dos formulários (5 validações) 
 - Design/Layout/Cores Itens de acessibilidade (Imagens, Modo claro/escuro)
 
-FINALIZADO
+TESTANDO ALTERAÇÃO DO NOME DO REPOSITÓRIO
+
