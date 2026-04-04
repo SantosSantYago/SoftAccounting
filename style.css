@@ -59,6 +59,11 @@ body.dark-mode {
     color: white;
     border-color: #444;
 }
+.list-group-item {
+    background-color: inherit !important;
+    color: inherit !important;
+    border-color: rgba(150, 150, 150, 0.2) !important;
+}
 
 /* Botão de Toggle de Acessibilidade */
 .theme-switch-wrapper {
