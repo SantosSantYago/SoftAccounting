@@ -1,7 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     
-    // --- PASSO 1: CRIAR O BOTÃO DINAMICAMENTE ---
-    // Criamos a estrutura que antes ficava no HTML
+    // Botão para alternar entre o modo Claro e Escuro
     const wrapper = document.createElement('div');
     wrapper.className = 'theme-switch-wrapper';
     
@@ -14,16 +13,14 @@ document.addEventListener('DOMContentLoaded', () => {
     wrapper.appendChild(button);
     document.body.appendChild(wrapper);
 
-    // --- PASSO 2: LÓGICA DE PERSISTÊNCIA ---
+    // Onde irá ficar gravado a opção de escolha entre os modos Claro e Escuro
     const body = document.body;
     const savedTheme = localStorage.getItem('theme');
-
-    // Função para atualizar o texto do botão
     const updateButtonText = () => {
         button.innerText = body.classList.contains('dark-mode') ? "☀️ Modo Claro" : "🌙 Modo Escuro";
     };
 
-    // Aplica o tema salvo ao carregar
+    // Aplicar o tema salvo ao carregar uma página
     if (savedTheme === 'dark') {
         body.classList.add('dark-mode');
         updateButtonText();
@@ -42,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-    // --- 2. VALIDAÇÃO DE FORMULÁRIO SEGURA ---
+    // Validação de formulário
     const contactForm = document.getElementById('contactForm');
 
     if (contactForm) {
@@ -50,20 +47,20 @@ document.addEventListener('DOMContentLoaded', () => {
             // Impede o envio padrão para validar antes
             event.preventDefault();
 
-            const nome = document.getElementById('nome').value.trim();
+            const nome = document.getElementById('nome').value.trim(); //.value.trim()remove espaços vazios no início ou fim do texto
             const email = document.getElementById('email').value.trim();
             const telefone = document.getElementById('telefone').value.trim();
             const mensagem = document.getElementById('mensagem').value.trim();
 
-            // Validação simples de segurança (Anti-spam/vazio)
+            // Validação simples de segurança (se o nome tem menos de 3 letras, se o e-mail possui @, se a mensagem tem menos de 10 caracteres))
             if (nome.length < 3 || !email.includes('@') || mensagem.length < 10) {
                 alert('Por favor, preencha todos os campos corretamente para sua segurança.');
                 return;
             }
 
-            // Simulação de envio bem-sucedido
+            // O site não possui um banco de dados vinculado, então esse código simula o envio bem-sucedido do formulário
             alert(`Obrigado, ${nome}! Sua mensagem foi enviada com sucesso para a Soft Accounting.`);
-            contactForm.reset();
+            contactForm.reset();// após o envio o formulário será resetado para um novo uso
         });
     }
 

@@ -1,5 +1,5 @@
-/* Atributo 1: Variáveis para facilitar o Modo Escuro */
-:root {
+
+:root { /*Centraliza a configuração de cores da página, onde definimos as cores padrão do modo Claro*/
     --primary-color: #006666;
     --bg-color: #ffffff;
     --text-color: #333333;
@@ -7,7 +7,7 @@
 }
 
 /* Atributo 2: Configurações de Transição */
-body {
+body { /*Configuração do comportamento global da página*/
     background-color: var(--bg-color);
     color: var(--text-color);
     transition: background 0.4s, color 0.4s;
@@ -15,7 +15,7 @@ body {
 }
 
 /* Atributo 3: Estilização da Logo (Seletores combinados) */
-.logo {
+.logo { /*Estilização da logo do escritório na página*/
     font-size: 1.8rem;
     font-weight: 800;
     color: var(--primary-color);
@@ -23,7 +23,7 @@ body {
 .logo span { color: #00cccc; }
 
 /* Atributo 4: Background com Imagem Profissional e Overlay */
-.imagem_principal {
+.imagem_principal { /*Background com a logo do escritório na imagem de cima*/
     height: 60vh;
     background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
                 url('img/logo_soft_accountig.png');
@@ -32,7 +32,7 @@ body {
     color: white;
 }
 
-/* Atributo 5: Customização de botões e estados (Pseudo-classes) */
+/* Customização dos botões e os seus comportamentos */
 .btn-primary {
     background-color: var(--primary-color);
     border: none;
@@ -51,7 +51,7 @@ body.dark-mode {
     --card-bg: #1e1e1e;
 }
 .dark-mode .card, .dark-mode header, .dark-mode .bg-light {
-    background-color: var(--card-bg) !important;
+    background-color: var(--card-bg) !important; /*o !importanté utilizado no Bootstrap para garantir prioridade de declarações específicas*/
     color: white;
 }
 .dark-mode input, .dark-mode textarea {
@@ -76,7 +76,7 @@ body.dark-mode {
     border: none;
     padding: 10px 15px;
     border-radius: 20px;
-    cursor: pointer;
+    cursor: pointer; /*Muda a seta do mouse para a mãozinha ao passar o mouse em cima de alguns botões*/
     background: var(--primary-color);
     color: white;
     box-shadow: 0 4px 10px rgba(0,0,0,0.3);
